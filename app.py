@@ -2,7 +2,6 @@ from flask import Flask, render_template
 import threading
 import time
 import urllib.request
-import os
 
 app = Flask(__name__)
 
@@ -11,7 +10,7 @@ keep_alive_started = False
 
 def keep_alive():
     while True:
-        time.sleep(600)
+        time.sleep(300)
         try:
             urllib.request.urlopen(SELF_URL, timeout=10)
         except Exception:
@@ -21,7 +20,7 @@ def keep_alive():
 @app.before_request
 def start_keep_alive():
     global keep_alive_started
-    if not keep_alive_started and os.environ.get("RENDER"):
+    if not keep_alive_started:
         keep_alive_started = True
         threading.Thread(target=keep_alive, daemon=True).start()
 

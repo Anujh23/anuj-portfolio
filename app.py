@@ -14,7 +14,7 @@ def keep_alive():
             urllib.request.urlopen(SELF_URL, timeout=10)
         except Exception:
             pass
-        time.sleep(300)
+        time.sleep(30)
 
 threading.Thread(target=keep_alive, daemon=True).start()
 

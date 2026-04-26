@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuj — Data & AI Engineer | Azure & Databricks</title>
+    <meta name="description" content="Data & AI Engineer who builds fintech platforms processing 10,000+ loan applications daily. 3 years in fintech, Azure-certified, open to opportunities.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Anuj">
+    <meta name="theme-color" content="#f8fafc">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Anuj — Data & AI Engineer Portfolio">
+    <meta property="og:description" content="I architect data systems that process 10K+ loan applications daily and 1M+ streaming events with sub-second latency. Open to opportunities.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/83965811?v=4">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Anuj — Data & AI Engineer Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anuj — Data & AI Engineer Portfolio">
+    <meta name="twitter:description" content="I architect data systems that process 10K+ loan applications daily and 1M+ streaming events with sub-second latency. Open to opportunities.">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/83965811?v=4">
+    <meta name="twitter:creator" content="@anujhiranwal23">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💠</text></svg>">
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin>
+
+    <!-- Preload LCP hero image -->
+    <link rel="preload" as="image" href="https://avatars.githubusercontent.com/u/83965811?v=4" crossorigin>
+
+    <!-- Fonts (dropped unused Inter 300 weight) -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome with SRI -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anuj",
+        "jobTitle": "Data & AI Engineer",
+        "description": "Data & AI Engineer specializing in fintech platforms, real-time data pipelines, and multi-agent AI systems.",
+        "url": "https://anujh23.github.io/anuj-portfolio/",
+        "image": "https://avatars.githubusercontent.com/u/83965811?v=4",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Bharat Fincare"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/anuj-choudhary-61b7051b0/",
+            "https://github.com/Anujh23",
+            "https://x.com/anujhiranwal23"
+        ],
+        "knowsAbout": ["Python", "SQL", "PySpark", "Azure Data Factory", "Databricks", "Microsoft Fabric", "Delta Lake", "LLMs", "RAG", "LangChain", "CrewAI", "Multi-Agent Systems", "FastAPI", "Flask", "Docker", "PostgreSQL", "Power BI"],
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "certification",
+                "name": "DP-600 Fabric Analytics Engineer Associate",
+                "recognizedBy": { "@type": "Organization", "name": "Microsoft" }
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "certification",
+                "name": "Agentic AI",
+                "recognizedBy": { "@type": "Organization", "name": "DeepLearning.AI" }
+            }
+        ],
+        "nationality": { "@type": "Country", "name": "India" }
+    }
+    </script>
+
+    <!-- Noscript fallback -->
+    <noscript>
+        <style>
+            #loader { display: none !important; }
+            .reveal { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
+</head>
+<body>
+    <a href="#hero" class="skip-link">Skip to content</a>
+
+    <!-- ======== BACKGROUND ORBS (Glassmorphism backdrop) ======== -->
+    <div class="bg-orbs" aria-hidden="true">
+        <div class="bg-orb bg-orb--1"></div>
+        <div class="bg-orb bg-orb--2"></div>
+        <div class="bg-orb bg-orb--3"></div>
+    </div>
+
+    <!-- ======== PARTICLE CANVAS ======== -->
+    <canvas id="particles" aria-hidden="true"></canvas>
+
+    <!-- ======== LOADING SCREEN ======== -->
+    <div id="loader" role="status" aria-label="Loading">
+        <div class="loader-content">
+            <div class="loader-icon">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="loader-text">LOADING</div>
+            <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- ======== NAVIGATION ======== -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <div class="nav-logo">
+                <img src="https://avatars.githubusercontent.com/u/83965811?v=4" alt="Anuj" class="logo-avatar" width="36" height="36">
+                <span class="logo-text">Anuj Portfolio</span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <div class="nav-socials">
+                <a href="https://www.linkedin.com/in/anuj-choudhary-61b7051b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="nav-social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Anujh23" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="nav-social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav-accent-line"></div>
+    </nav>
+
+    <main>
+    <!-- ======== HERO SECTION ======== -->
+    <section id="hero" class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-tag">
+                    <span class="tag-dot"></span> OPEN TO OPPORTUNITIES
+                </div>
+                <div class="hero-greeting">Hi, I'm</div>
+                <h1 class="hero-name">
+                    <span class="name-last">Anuj</span>
+                    <span class="sr-only">— Data & AI Engineer</span>
+                </h1>
+                <div class="hero-role">
+                    <span class="role-badge">DATA & AI ENGINEER</span>
+                    <span class="role-sector">FINTECH</span>
+                </div>
+                <p class="hero-desc">
+                    I architect credit risk platforms that process 10,000+ loan applications daily
+                    and real-time pipelines handling 1M+ events with sub-second latency.
+                    Three years turning raw fintech data into automated lending decisions.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="3">0</div>
+                        <div class="stat-label">YRS IN FINTECH</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value stat-suffix" data-target="10" data-suffix="K+">0</div>
+                        <div class="stat-label">DAILY LOAN APPS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value stat-suffix" data-target="1" data-suffix="M+">0</div>
+                        <div class="stat-label">EVENTS / DAY</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">DP-600</div>
+                        <div class="stat-label">CERTIFIED</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn-primary"><i class="fas fa-envelope"></i> LET'S TALK</a>
+                    <a href="static/resume/Anuj_Data_AI_Engineer.pdf" download class="btn-outline"><i class="fas fa-download"></i> Resume</a>
+                </div>
+            </div>
+
+            <!-- PHOTO -->
+            <div class="hero-right">
+                <div class="photo-container">
+                    <div class="photo-glow"></div>
+                    <div class="photo-ring"></div>
+                    <div class="photo-frame">
+                        <img src="https://avatars.githubusercontent.com/u/83965811?v=4" alt="Anuj — Data & AI Engineer" width="360" height="360" loading="eager" fetchpriority="high">
+                    </div>
+                    <div class="photo-badge">DATA & AI ENGINEER</div>
+                    <button id="musicToggleHero" class="music-toggle-hero" aria-label="Play music" title="Play music">
+                        <div class="sound-bars">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <span class="music-label">PLAY</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+    <!-- ======== ABOUT SECTION ======== -->
+    <section id="about" class="section">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">About Me</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="about-grid">
+            <div class="about-card about-bio">
+                <div class="card-header">
+                    <i class="fas fa-user-astronaut"></i>
+                    <h3>BIO</h3>
+                </div>
+                <p>It started with a B.Tech in Artificial Intelligence at Vivekananda Global University, where I got my hands dirty with data structures, machine learning, and Hadoop. But the real education began when I stepped into Mandelbulb Technologies as a Data Engineer — building end-to-end pipelines on Azure and Databricks, learning what it actually means to make data reliable at scale.</p>
+                <p>That foundation led me deeper. I started integrating LLMs and open-source AI into production workflows, picked up the DP-600 Microsoft certification, and earned an Agentic AI certificate from DeepLearning.AI. Along the way, I learned that the hardest engineering problems aren't about the tools — they're about understanding how a business actually works and encoding that logic into systems that run thousands of decisions per day without breaking.</p>
+                <p>Now at Bharat Fincare, I'm building intelligent financial tools — credit analyzers, bank statement parsers, automated reporting systems on AWS — the kind of infrastructure that turns a fintech from manual to machine-driven. I'm looking for a team that treats data infrastructure as a competitive advantage, not an afterthought.</p>
+                <div class="about-tags">
+                    <span class="about-tag">Azure</span>
+                    <span class="about-tag">Databricks</span>
+                    <span class="about-tag">Python</span>
+                    <span class="about-tag">LLMs</span>
+                    <span class="about-tag">Fintech</span>
+                    <span class="about-tag">RAG</span>
+                    <span class="about-tag">CrewAI</span>
+                    <span class="about-tag">AWS</span>
+                </div>
+            </div>
+            <div class="about-card about-details">
+                <div class="card-header">
+                    <i class="fas fa-id-card"></i>
+                    <h3>DETAILS</h3>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">NAME</span>
+                    <span class="detail-value">Anuj</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">ROLE</span>
+                    <span class="detail-value">Data & AI Engineer</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">TEAM</span>
+                    <span class="detail-value">Bharat Fincare (Current)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">EDUCATION</span>
+                    <span class="detail-value">B.Tech in AI — VGU, Jaipur</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">SECTOR</span>
+                    <span class="detail-value">Fintech</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">AVAILABILITY</span>
+                    <span class="detail-value status-active"><span class="status-dot"></span> Immediate Availability</span>
+                </div>
+                <div class="cert-badges">
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>DP-600 (Fabric Analytics Engineer)</span>
+                    </div>
+                    <div class="cert-badge">
+                        <i class="fas fa-robot"></i>
+                        <span>Agentic AI — DeepLearning.AI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== SKILLS / TECH SPECS — Tag-based, no percentages ======== -->
+    <section id="skills" class="section">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-icon"><i class="fa-solid fa-terminal"></i></div>
+                    <h3>Languages</h3>
+                    <span class="skill-sub">Core Languages</span>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag primary">Python</span>
+                    <span class="skill-tag primary">SQL</span>
+                    <span class="skill-tag primary">PySpark</span>
+                    <span class="skill-tag">KQL</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-icon"><i class="fa-solid fa-cloud"></i></div>
+                    <h3>Cloud & Data</h3>
+                    <span class="skill-sub">Cloud & Data Platform</span>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag primary">Azure Data Factory</span>
+                    <span class="skill-tag primary">Databricks</span>
+                    <span class="skill-tag primary">Microsoft Fabric</span>
+                    <span class="skill-tag">PostgreSQL / MySQL</span>
+                    <span class="skill-tag">Event Hubs / Kafka</span>
+                    <span class="skill-tag">Delta Lake</span>
+                    <span class="skill-tag">AWS (S3 / EC2)</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>AI & ML</h3>
+                    <span class="skill-sub">AI & Machine Learning</span>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag primary">LLMs / RAG</span>
+                    <span class="skill-tag primary">LangChain</span>
+                    <span class="skill-tag primary">CrewAI</span>
+                    <span class="skill-tag">OpenAI / Azure AI</span>
+                    <span class="skill-tag">Multi-Agent Systems</span>
+                    <span class="skill-tag">PyTorch / TensorFlow</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3>DevOps & Tools</h3>
+                    <span class="skill-sub">Infrastructure & Tooling</span>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag primary">Docker</span>
+                    <span class="skill-tag primary">FastAPI / Flask</span>
+                    <span class="skill-tag">Git / CI-CD</span>
+                    <span class="skill-tag">Power BI</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Kubernetes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== PROJECTS / RACE LOG ======== -->
+    <section id="projects" class="section">
+        <div class="section-header">
+            <span class="section-number">04</span>
+            <h2 class="section-title">Projects</h2>
+            <div class="section-line"></div>
+        </div>
+        <!-- CLIENT PROJECTS -->
+        <h3 class="projects-subtitle">Client Projects</h3>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-position">01</div>
+                <div class="project-flag-stripe"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Fintech Risk Intelligence Platform</h3>
+                    <p class="project-desc">Loan underwriters were manually reviewing applications using spreadsheets — slow, error-prone, and unscalable. I built an automated credit risk platform integrating Account Aggregator feeds, CIBIL scoring, and behavioral analytics. Now processes 10,000+ applications daily with zero manual triage.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Azure</span><span>LLMs</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anujh23/credit-desk-goodskill" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+                <div class="project-time">2024-Present</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-position">02</div>
+                <div class="project-flag-stripe"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Fleet Telemetry — Real-Time Pipeline</h3>
+                    <p class="project-desc">Fleet operations relied on batch processing that delivered insights hours too late. I engineered a streaming pipeline with Azure Event Hubs and Databricks ingesting 1M+ daily telemetry events — cutting data delay from hours to milliseconds and reducing operational costs by 20%.</p>
+                    <div class="project-tech">
+                        <span>Azure</span><span>Databricks</span><span>Event Hubs</span><span>PySpark</span><span>Power BI</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link project-private"><i class="fas fa-lock"></i> Private</span>
+                    </div>
+                </div>
+                <div class="project-time">2023-2024</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-position">03</div>
+                <div class="project-flag-stripe"></div>
+                <div class="project-content">
+                    <h3 class="project-title">AI Assistant — RAG + Azure OpenAI</h3>
+                    <p class="project-desc">Teams needed instant access to scattered internal knowledge. I built an AI Assistant using Retrieval-Augmented Generation and Azure OpenAI with Microsoft Fabric OneLake for storage and KQL for retrieval — achieving 0.1s query response times and 1-2s LLM output with CI/CD on Azure App Services.</p>
+                    <div class="project-tech">
+                        <span>Azure OpenAI</span><span>RAG</span><span>Microsoft Fabric</span><span>KQL</span><span>CI/CD</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link project-private"><i class="fas fa-lock"></i> Private</span>
+                    </div>
+                </div>
+                <div class="project-time">2024</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-position">04</div>
+                <div class="project-flag-stripe"></div>
+                <div class="project-content">
+                    <h3 class="project-title">CIBIL Data Automation System</h3>
+                    <p class="project-desc">Repetitive CIBIL data fetches via TransUnion were driving high recurring API costs. I built a caching system that extracts key credit data (PAN, name, score) from local sources, stores it in PostgreSQL with AWS S3 backup — significantly cutting third-party API costs and response times.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>PostgreSQL</span><span>AWS S3</span><span>REST APIs</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link project-private"><i class="fas fa-lock"></i> Private</span>
+                    </div>
+                </div>
+                <div class="project-time">2025</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-position">05</div>
+                <div class="project-flag-stripe"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Credit Analyzer — Desktop Application</h3>
+                    <p class="project-desc">Credit managers lacked a unified tool to assess risk efficiently. I designed a desktop-based Credit Analyzer using Python (PyQt6) for the UI, deployed as a microservice with REST APIs — streamlining credit evaluation workflows and improving decision accuracy.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>PyQt6</span><span>REST APIs</span><span>Microservices</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link project-private"><i class="fas fa-lock"></i> Private</span>
+                    </div>
+                </div>
+                <div class="project-time">2025</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-position">06</div>
+                <div class="project-flag-stripe"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Executive Power BI Dashboard</h3>
+                    <p class="project-desc">C-level executives lacked real-time visibility into key business KPIs. I created an interactive Power BI dashboard that identified underperformance areas and provided data-driven recommendations — aligning metrics with organizational goals and decision-making needs.</p>
+                    <div class="project-tech">
+                        <span>Power BI</span><span>SQL</span><span>Data Modeling</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link project-private"><i class="fas fa-lock"></i> Private</span>
+                    </div>
+                </div>
+                <div class="project-time">2025</div>
+            </div>
+        </div>
+
+        <!-- PERSONAL PROJECTS -->
+        <h3 class="projects-subtitle">Personal Projects</h3>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-position">01</div>
+                <div class="project-flag-stripe"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Multi-Agent Book Writer — CrewAI</h3>
+                    <p class="project-desc">Writing a structured book requires research, drafting, and editing — typically weeks of sequential human effort. I orchestrated a multi-agent system using CrewAI where specialized AI agents collaborate on each phase, producing cohesive long-form content in under an hour.</p>
+                    <div class="project-tech">
+                        <span>CrewAI</span><span>LangChain</span><span>Python</span><span>OpenAI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anujh23/Crewai-book-writer" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+                <div class="project-time">2024</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-position">02</div>
+                <div class="project-flag-stripe"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Lead Vision Pro — Lead Analytics</h3>
+                    <p class="project-desc">Sales teams needed a smarter way to prioritize leads. I built an analytics platform that scores and ranks leads using data-driven signals, helping teams focus on high-conversion prospects and improve pipeline efficiency.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Data Analytics</span><span>ML</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anujh23/Lead-Vision-Pro" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+                <div class="project-time">2024</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-position">03</div>
+                <div class="project-flag-stripe"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Customer Insights — Analytics Platform</h3>
+                    <p class="project-desc">Businesses struggle to extract actionable patterns from customer data. I built a Python-based analytics platform that segments customers, identifies behavior trends, and surfaces insights for retention and growth strategies.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Pandas</span><span>Data Analysis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anujh23/customer_insights" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+                <div class="project-time">2024</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-position">04</div>
+                <div class="project-flag-stripe"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Australian Company Data — ETL Pipeline</h3>
+                    <p class="project-desc">Raw government registration data arrived in inconsistent formats blocking downstream analysis. I built an automated ETL pipeline with data quality validation gates, transforming unreliable source data into clean, analysis-ready datasets.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Jupyter</span><span>ETL</span><span>Data Pipeline</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anujh23/australian-company-data-pipeline" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+                <div class="project-time">2024</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-position">05</div>
+                <div class="project-flag-stripe"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Bharat Fincare Dashboard</h3>
+                    <p class="project-desc">Built a financial reporting dashboard for Bharat Fincare, providing real-time visibility into credit operations, loan processing metrics, and team performance — enabling data-driven management decisions.</p>
+                    <div class="project-tech">
+                        <span>CSS</span><span>HTML</span><span>JavaScript</span><span>Dashboard</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anujh23/bharatfincare-dashboard" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+                <div class="project-time">2025</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-position">06</div>
+                <div class="project-flag-stripe"></div>
+                <div class="project-content">
+                    <h3 class="project-title">Spam Email Classifier — ML</h3>
+                    <p class="project-desc">Built a machine learning classifier to automatically distinguish spam emails from legitimate ones using text features and NLP techniques — demonstrating end-to-end ML pipeline from data preprocessing to model evaluation.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Scikit-learn</span><span>NLP</span><span>Jupyter</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anujh23/Classify-spam-vs-no-spam-emails" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+                <div class="project-time">2024</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== EXPERIENCE / PIT HISTORY ======== -->
+    <section id="experience" class="section">
+        <div class="section-header">
+            <span class="section-number">05</span>
+            <h2 class="section-title">Experience</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Data & AI Engineer</h3>
+                            <span class="timeline-company">Bharat Fincare</span>
+                        </div>
+                        <span class="timeline-date">May 2025 — Present</span>
+                    </div>
+                    <ul class="timeline-details">
+                        <li>Developed intelligent financial tools like Credit and Bank Statement Analyzers for Credit Managers, streamlining credit evaluation processes</li>
+                        <li>Designed and implemented a scalable reporting architecture on AWS using Power BI and MySQL, enabling actionable insights</li>
+                        <li>Enhanced data quality by automating error detection and correction through web scraping techniques</li>
+                    </ul>
+                    <div class="timeline-tech">
+                        <span>Python</span><span>AWS</span><span>Power BI</span><span>MySQL</span><span>LLMs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Software Developer</h3>
+                            <span class="timeline-company">Freelancing</span>
+                        </div>
+                        <span class="timeline-date">Nov 2024 — Mar 2025</span>
+                    </div>
+                    <ul class="timeline-details">
+                        <li>Redesigned and enhanced a CSR website using AI-assisted tools, leveraging HTML, CSS, and JavaScript to improve user experience and performance</li>
+                        <li>Assisted the organization in securing a free Google Grant for CSR initiatives, collaborating with Business Development Executives and SEO specialists</li>
+                    </ul>
+                    <div class="timeline-tech">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>SEO</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-header">
+                        <div>
+                            <h3>Data Engineer</h3>
+                            <span class="timeline-company">Mandelbulb Technologies</span>
+                        </div>
+                        <span class="timeline-date">July 2023 — Sept 2024</span>
+                    </div>
+                    <ul class="timeline-details">
+                        <li>Developed and optimized end-to-end data pipelines using Microsoft Azure, ADF and Databricks, boosting data processing by 20%</li>
+                        <li>Improved query performance and data quality, cutting errors by 15% and reducing load times by 15%</li>
+                        <li>Integrated AI solutions with open-source LLMs and OpenAI to enhance data-driven decision-making</li>
+                    </ul>
+                    <div class="timeline-tech">
+                        <span>Azure</span><span>Databricks</span><span>ADF</span><span>PySpark</span><span>OpenAI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== CONNECT ======== -->
+    <section id="contact" class="section">
+        <div class="section-header">
+            <span class="section-number">06</span>
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="connect-center">
+            <h3 class="connect-heading">Let's Build Something</h3>
+            <p class="connect-desc">I'm looking for Data & AI Engineer roles. If your team needs someone who has already shipped fintech platforms and real-time pipelines at scale — let's talk.</p>
+            <div class="connect-channels">
+                <a href="https://www.linkedin.com/in/anuj-choudhary-61b7051b0/" target="_blank" rel="noopener noreferrer" class="contact-channel" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                    <span>
+                        <span class="channel-label">LINKEDIN</span>
+                        <span class="channel-value">Anuj</span>
+                    </span>
+                </a>
+                <a href="mailto:anujhiranwal23@gmail.com" class="contact-channel" aria-label="Send Email">
+                    <i class="fas fa-envelope"></i>
+                    <span>
+                        <span class="channel-label">EMAIL</span>
+                        <span class="channel-value">anujhiranwal23@gmail.com</span>
+                    </span>
+                </a>
+                <a href="tel:+919785943363" class="contact-channel" aria-label="Phone Number">
+                    <i class="fas fa-phone"></i>
+                    <span>
+                        <span class="channel-label">PHONE</span>
+                        <span class="channel-value">+91 9785943363</span>
+                    </span>
+                </a>
+            </div>
+            <div class="connect-channels-bottom">
+                <a href="https://github.com/Anujh23" target="_blank" rel="noopener noreferrer" class="contact-channel" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                    <span>
+                        <span class="channel-label">GITHUB</span>
+                        <span class="channel-value">Anujh23</span>
+                    </span>
+                </a>
+                <a href="https://x.com/anujhiranwal23" target="_blank" rel="noopener noreferrer" class="contact-channel" aria-label="X Twitter Profile">
+                    <i class="fab fa-x-twitter"></i>
+                    <span>
+                        <span class="channel-label">X / TWITTER</span>
+                        <span class="channel-value">@anujhiranwal23</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- ======== FOOTER ======== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="https://avatars.githubusercontent.com/u/83965811?v=4" alt="Anuj" class="logo-avatar" width="36" height="36" loading="lazy">
+                <span class="logo-text">Anuj Portfolio</span>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2026 Anuj. Engineered from scratch — no templates, no shortcuts.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/anuj-choudhary-61b7051b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Anujh23" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/anujhiranwal23" target="_blank" rel="noopener noreferrer" aria-label="X Twitter"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-line"></div>
+    </footer>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop preload="none">
+        <source src="static/music/background.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="static/js/main.js" defer></script>
+</body>
+</html>
